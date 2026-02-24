@@ -8,7 +8,7 @@ services:
       - "27017:27017"
 
   backend:
-    build: ./backend
+    image: harshraisaxena/mean-backend:latest
     container_name: backend
     ports:
       - "3000:8080"
@@ -16,7 +16,7 @@ services:
       - mongo
 
   frontend:
-    build: ./frontend
+    image: harshraisaxena/mean-frontend:latest
     container_name: frontend
     ports:
       - "4200:80"
