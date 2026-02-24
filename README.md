@@ -1,27 +1,84 @@
-In this DevOps task, you need to build and deploy a full-stack CRUD application using the MEAN stack (MongoDB, Express, Angular 15, and Node.js). The backend will be developed with Node.js and Express to provide REST APIs, connecting to a MongoDB database. The frontend will be an Angular application utilizing HTTPClient for communication.  
+# MEAN Stack DevOps Assignment
 
-The application will manage a collection of tutorials, where each tutorial includes an ID, title, description, and published status. Users will be able to create, retrieve, update, and delete tutorials. Additionally, a search box will allow users to find tutorials by title.
+This project demonstrates containerization, CI/CD automation, and cloud deployment of a full-stack MEAN (MongoDB, Express, Angular, Node.js) application.
 
-## Project setup
+The application allows users to create, view, update, delete, and search tutorials.
 
-### Node.js Server
+---
 
-cd backend
+## Tech Stack
+- Angular
+- Node.js & Express
+- MongoDB
+- Docker & Docker Compose
+- GitHub Actions
+- AWS EC2 (Ubuntu)
+- Nginx
 
-npm install
+---
 
-You can update the MongoDB credentials by modifying the `db.config.js` file located in `app/config/`.
+## Architecture
+GitHub → GitHub Actions → Docker Hub → AWS EC2 → Docker Compose → Nginx → Application
 
-Run `node server.js`
+---
 
-### Angular Client
+## Prerequisites
+- AWS EC2 Ubuntu instance
+- Docker & Docker Compose installed
+- Git installed
+- Docker Hub account
 
-cd frontend
+---
 
-npm install
+## Deployment Steps
 
-Run `ng serve --port 8081`
+Clone Repository
+git clone https://github.com/harshraisaxena/DevOps-Task.git
+cd DevOps-Task
 
-You can modify the `src/app/services/tutorial.service.ts` file to adjust how the frontend interacts with the backend.
+Run Application
+docker-compose pull
+docker-compose up -d
 
-Navigate to `http://localhost:8081/`
+Open in browser
+http://<EC2_PUBLIC_IP>
+
+---
+
+## Docker Images
+harshraisaxena/mean-backend  
+harshraisaxena/mean-frontend  
+
+---
+
+## CI/CD Pipeline
+On every push to the main branch:
+- Builds backend and frontend Docker images
+- Pushes images to Docker Hub using GitHub Actions
+
+---
+
+## Nginx Reverse Proxy
+- Port 80 → Frontend  
+- /api → Backend  
+
+---
+
+## Screenshots
+
+GitHub Actions Success  
+screenshots/actions-success.png
+
+Docker Hub Images  
+screenshots/dockerhub-images.png
+
+Application Running  
+screenshots/app-running.png
+
+Nginx Configuration  
+screenshots/nginx-config.png
+
+---
+
+## Author
+Harsh Rai Saxena
