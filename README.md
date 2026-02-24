@@ -66,17 +66,17 @@ On every push to the main branch:
 
 ## Screenshots
 
-GitHub Actions Success  
-screenshots/actions-success.png
+### GitHub Actions Success
+![actions](screenshots/actions-success.png)
 
-Docker Hub Images  
-screenshots/dockerhub-images.png
+### Docker Hub Images
+![dockerhub](screenshots/dockerhub-images.png)
 
-Application Running  
-screenshots/app-running.png
+### Application Running
+![app](screenshots/app-running.png)
 
-Nginx Configuration  
-screenshots/nginx-config.png
+### Nginx Configuration
+![nginx](screenshots/nginx-config.png)
 
 ---
 
